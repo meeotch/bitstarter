@@ -92,7 +92,7 @@ if (require.main == module) {
     if (program.url) 
         rest.get(program.url).on('complete', buildfn(program.url, program.checks));
     else
-        jsonOut(checkHtml(fs.readFileSync(htmlfile), program.checks));
+        jsonOut(checkHtml(fs.readFileSync(program.file), program.checks));
 } else {
     exports.checkHtml = checkHtml;
 }
