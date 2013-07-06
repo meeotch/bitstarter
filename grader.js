@@ -53,7 +53,6 @@ var buildfn = function(url, checksfile) {
             console.error('Error: ' + util.format(response.message));
         } else {
             console.error("Read from URL: %s", url);
-            console.error(response);
             jsonOut(checkHtml(result, checksfile));
         }
     };
