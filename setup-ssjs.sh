@@ -41,10 +41,10 @@ heroku addons:add heroku-postgresql:dev
 #* to "heroku pg:promote".  It's all a really roundabout way of updating an 
 #* environment variable for your heroku app.
 heroku pg:promote `heroku config  | grep HEROKU_POSTGRESQL | cut -f1 -d':'`
-#* heroku-config (not to be confused with "heroku config") is a plugin for the
-#* heroku toolbelt that provides commands to push/pull your heroku environment
-#* (e.g. DATABASE_URL) to and from your local working directory (the .env file).
-#* It is written in Ruby.
+#* heroku-config is a plugin for the heroku toolbelt that provides commands to 
+#* push/pull your heroku environment (e.g. DATABASE_URL) to and from your local 
+#* working directory (the .env file).  heroku-config extends the "heroku config" 
+#* command.  It is written in Ruby.
 heroku plugins:install git://github.com/ddollar/heroku-config.git
 
 # Set up heroku configuration variables
